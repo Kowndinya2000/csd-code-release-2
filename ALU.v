@@ -13,6 +13,8 @@ module ALU(Read_data_1, Read_data_2, ALUControl, ALUresult, isZero);
         orcode[3:0]  <= 4'b0001;
         sltcode[3:0] <= 4'b0111;
     end
+    //assign isZero = (ALUresult == 0);
+
     always @(Read_data_1, Read_data_2, ALUControl)
     if(ALUControl == addcode)
         ALUresult = Read_data_1 + Read_data_2;
